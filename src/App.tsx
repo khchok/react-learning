@@ -6,6 +6,7 @@ import DemoNoContext from "./components/DemoNoContext";
 import TodoAppWithReducer from "./components/TodoAppWithReducer";
 import TodoRedux from "./components/TodoRedux";
 import TodoReduxThunk from "./components/TodoReduxThunk";
+import TodoReactQuery from "./components/TodoReactQuery";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         justifyContent: "center",
       }}
     >
-      <TodoReduxThunk />
+      <TodoReactQuery />
     </div>
   );
   // return (

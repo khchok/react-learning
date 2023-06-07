@@ -7,8 +7,8 @@ const useGetTodosQuery = () => {
   const query = useQuery<ITodo[]>(
     ["todos", "get"],
     async () => {
-      const data = await apiGetTodos();
-      return data;
+      const resp = await apiGetTodos();
+      return resp.data;
     },
     {
       // retry: 1,

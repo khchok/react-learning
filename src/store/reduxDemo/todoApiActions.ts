@@ -3,10 +3,10 @@ import { apiGetTodos, apiPostTodo } from "../../api/todoApi";
 
 export const fetchTodoData = () => {
   return async (dispatch: any) => {
-    const todos = await apiGetTodos();
+    const resp = await apiGetTodos();
     dispatch(
       todoActions.refreshTodos({
-        todos,
+        todos: resp.data,
       })
     );
   };

@@ -6,11 +6,11 @@ export const thunkGetTodos = createAsyncThunk(
   "todo-app/get",
   async (_, thunkAPI) => {
     try {
-      const data = await apiGetTodos();
+      const resp = await apiGetTodos();
       // massage data
       //sanitize data
       // remove certain data
-      return { todos: data };
+      return { todos: resp.data };
     } catch (error) {
       return thunkAPI.rejectWithValue({ error: error });
     }
